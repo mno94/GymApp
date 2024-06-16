@@ -39,32 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                             const detallesEjercicio = document.createElement('p');
                             detallesEjercicio.textContent = `Repeticiones: ${ejercicio.repeticiones} | Series: ${ejercicio.series} | Peso: ${ejercicio.peso}`;
-                            detallesEjercicio.classList.add('ejercicio-details');
                             ejercicioDiv.appendChild(detallesEjercicio);
 
                             ejercicioContainer.appendChild(ejercicioDiv);
                         });
-
-                        // Agregar botones de "Volver" y "Desmarcar Todo"
-                        const volverBtn = document.createElement('button');
-                        volverBtn.textContent = 'Volver';
-                        volverBtn.classList.add('volver-btn');
-                        volverBtn.addEventListener('click', () => {
-                            ejercicioContainer.innerHTML = ''; // Limpiar contenido al volver
-                            mostrarDias(); // Mostrar nuevamente los botones de días
-                        });
-                        ejercicioContainer.appendChild(volverBtn);
-
-                        const desmarcarTodoBtn = document.createElement('button');
-                        desmarcarTodoBtn.textContent = 'Desmarcar Todo';
-                        desmarcarTodoBtn.classList.add('desmarcar-todo-btn');
-                        desmarcarTodoBtn.addEventListener('click', () => {
-                            const checkboxes = ejercicioContainer.querySelectorAll('.ejercicio-checkbox');
-                            checkboxes.forEach(checkbox => {
-                                checkbox.checked = false;
-                            });
-                        });
-                        ejercicioContainer.appendChild(desmarcarTodoBtn);
                     } else {
                         const mensaje = document.createElement('p');
                         mensaje.textContent = 'No se encontraron ejercicios para este día.';
