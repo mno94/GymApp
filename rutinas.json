@@ -1,0 +1,221 @@
+[
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Circunferencia hombro con banda",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Manguito rotacion con banda",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Extension dorsal con rolo",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Flexiones cerradas",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Press banco declinado",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Press con W",
+                "repeticiones": 12,
+                "series": 2,
+                "peso": 10
+            },
+            {
+                "nombre": "Press pecho en landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Dorsales en landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Jalon dorsal",
+                "repeticiones": "12/10/08",
+                "series": 3,
+                "peso": 40
+            },
+            {
+                "nombre": "Remo cerrado",
+                "repeticiones": "12/10/08",
+                "series": 3,
+                "peso": 40
+            },
+            {
+                "nombre": "Curl biceps banco scott",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Apertura pecho con mancuerna",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            }
+        ]
+    },
+    {
+        "dia": "Dia 2",
+        "ejercicios": [
+            {
+                "nombre": "Flexiones extension cadera",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Balanceos fronteles y laterales",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Sentadillas",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Sentadillas landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Sentadilla con mancuerna y estocadas",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Peso muerto",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Hack",
+                "repeticiones": "10/08/06",
+                "series": 3,
+                "peso": 15
+            },
+            {
+                "nombre": "Gemelos hack",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 15
+            },
+            {
+                "nombre": "Camilla isquios",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 15
+            },
+            {
+                "nombre": "Hip trust maquina",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Camilla cuadriceps",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 50
+            }
+        ]
+    },
+    {
+        "dia": "Dia 3",
+        "ejercicios": [
+            {
+                "nombre": "Extension dorsal en banco",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Circunferencia hombro",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Posteriores con baston",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "W al menton",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Press frances",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Vuelos combinados",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Pull over",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Posteriores maquina",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Mariposa",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Press plano con barra",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Martillo con mancuernas",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            }
+        ]
+    }
+]
