@@ -1,40 +1,42 @@
+/* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-}
-
-h1, h2, h3 {
-    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 24px;
+    text-align: center;
 }
 
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 16px;
-}
-
-.rutina, .jornada {
+.day-container {
     margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.ejercicio {
-    display: flex;
-    align-items: center;
+.exercises-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.exercise-item {
     margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
 
-.ejercicio label {
-    margin-right: 10px;
+.exercise-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
-.ejercicio input[type="text"] {
-    width: 50px;
-    margin-left: 10px;
+.exercise-item p {
+    margin: 5px 0;
+    font-size: 14px;
 }
