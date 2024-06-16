@@ -43,6 +43,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
                             ejercicioContainer.appendChild(ejercicioDiv);
                         });
+
+                        // Agregar botones de "Volver" y "Desmarcar Todo"
+                        const volverBtn = document.createElement('button');
+                        volverBtn.textContent = 'Volver';
+                        volverBtn.classList.add('day-button');
+                        volverBtn.addEventListener('click', () => {
+                            ejercicioContainer.innerHTML = ''; // Limpiar contenido al volver
+                            mostrarDias(); // Mostrar nuevamente los botones de días
+                        });
+                        ejercicioContainer.appendChild(volverBtn);
+
+                        const desmarcarTodoBtn = document.createElement('button');
+                        desmarcarTodoBtn.textContent = 'Desmarcar Todo';
+                        desmarcarTodoBtn.classList.add('day-button');
+                        desmarcarTodoBtn.addEventListener('click', () => {
+                            const checkboxes = ejercicioContainer.querySelectorAll('.ejercicio-checkbox');
+                            checkboxes.forEach(checkbox => {
+                                checkbox.checked = false;
+                            });
+                        });
+                        ejercicioContainer.appendChild(desmarcarTodoBtn);
                     } else {
                         const mensaje = document.createElement('p');
                         mensaje.textContent = 'No se encontraron ejercicios para este día.';
@@ -55,14 +76,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            // Agregar event listeners a los botones de días
-            const btnDia1 = document.getElementById('btn-dia-1');
-            const btnDia2 = document.getElementById('btn-dia-2');
-            const btnDia3 = document.getElementById('btn-dia-3');
+            // Función para mostrar los botones de días
+            function mostrarDias() {
+                const botonesDias = document.createElement('div');
+                botonesDias.classList.add('botones-dias');
+                
+                const btnDia1 = document.createElement('button');
+                btnDia1.textContent = 'Día 1';
+                btnDia1.id = 'btn-dia-1';
+                btnDia1.classList.add('day-button');
+                btnDia1.addEventListener('click', () => mostrarDia('Dia 1'));
+                botonesDias.appendChild(btnDia1);
+                
+                const btnDia2 = document.createElement('button');
+                btnDia2.textContent = 'Día 2';
+                btnDia2.id = 'btn-dia-2';
+                btnDia2.classList.add('day-button');
+                btnDia2.addEventListener('click', () => mostrarDia('Dia 2'));
+                botonesDias.appendChild(btnDia2);
+                
+                const btnDia3 = document.createElement('button');
+                btnDia3.textContent = 'Día 3';
+                btnDia3.id = 'btn-dia-3';
+                btnDia3.classList.add('day-button');
+                btnDia3.addEventListener('click', () => mostrarDia('Dia 3'));
+                botonesDias.appendChild(btnDia3);
 
-            btnDia1.addEventListener('click', () => mostrarDia('Dia 1'));
-            btnDia2.addEventListener('click', () => mostrarDia('Dia 2'));
-            btnDia3.addEventListener('click', () => mostrarDia('Dia 3'));
+                ejercicioContainer.appendChild(botonesDias);
+            }
+
+            // Mostrar botones de días al cargar la página
+            mostrarDias();
         })
         .catch(error => console.error('Error al cargar el JSON:', error));
 });
