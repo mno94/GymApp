@@ -1,87 +1,271 @@
-import json
-
-# JSON original
-data = [
-    {"Ejercicios": "Dia 1", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Circunferencia hombro con banda", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "Manguito rotacion con banda", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "Extension dorsal con rolo", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Flexiones cerradas", "Repeticiones": 10, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Press banco declinado", "Repeticiones": 12, "Series": 3, "Peso": 10},
-    {"Ejercicios": "Press con W", "Repeticiones": 12, "Series": 2, "Peso": 10},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Press pecho en landmine", "Repeticiones": 12, "Series": 3, "Peso": 20},
-    {"Ejercicios": "Dorsales en landmine", "Repeticiones": 12, "Series": 3, "Peso": 20},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Jalon dorsal", "Repeticiones": "12/10/08", "Series": 3, "Peso": 40},
-    {"Ejercicios": "Remo cerrado", "Repeticiones": "12/10/08", "Series": 3, "Peso": 40},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Curl biceps banco scott", "Repeticiones": 10, "Series": 3, "Peso": 10},
-    {"Ejercicios": "Apertura pecho con mancuerna", "Repeticiones": 12, "Series": 3, "Peso": 10},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Dia 2", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Flexiones extension cadera", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "Balanceos fronteles y laterales", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "Sentadillas", "Repeticiones": 10, "Series": 2, "Peso": 0},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Sentadillas landmine", "Repeticiones": 12, "Series": 3, "Peso": 20},
-    {"Ejercicios": "Sentadilla con mancuerna y estocadas", "Repeticiones": 12, "Series": 3, "Peso": 10},
-    {"Ejercicios": "Peso muerto", "Repeticiones": 12, "Series": 3, "Peso": 20},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Hack", "Repeticiones": "10/08/06", "Series": 3, "Peso": 15},
-    {"Ejercicios": "Gemelos hack", "Repeticiones": 12, "Series": 3, "Peso": 15},
-    {"Ejercicios": "Camilla isquios", "Repeticiones": 12, "Series": 3, "Peso": 15},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Hip trust maquina", "Repeticiones": 10, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Camilla cuadriceps", "Repeticiones": 10, "Series": 3, "Peso": 50},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Dia 3", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Extension dorsal en banco", "Repeticiones": 10, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Circunferencia hombro", "Repeticiones": 10, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Posteriores con baston", "Repeticiones": 10, "Series": 3, "Peso": 0},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "W al menton", "Repeticiones": 12, "Series": 3, "Peso": 10},
-    {"Ejercicios": "Press frances", "Repeticiones": 12, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Vuelos combinados", "Repeticiones": 12, "Series": 3, "Peso": 10},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Pull over", "Repeticiones": 12, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Posteriores maquina", "Repeticiones": 12, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Mariposa", "Repeticiones": 12, "Series": 3, "Peso": 0},
-    {"Ejercicios": "", "Repeticiones": None, "Series": None, "Peso": None},
-    {"Ejercicios": "Press plano con barra", "Repeticiones": 12, "Series": 3, "Peso": 0},
-    {"Ejercicios": "Martillo con mancuernas", "Repeticiones": 12, "Series": 3, "Peso": 0}
+[
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Circunferencia hombro con banda",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Manguito rotacion con banda",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Extension dorsal con rolo",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            }
+        ]
+    },
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Flexiones cerradas",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Press banco declinado",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Press con W",
+                "repeticiones": 12,
+                "series": 2,
+                "peso": 10
+            }
+        ]
+    },
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Press pecho en landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Dorsales en landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            }
+        ]
+    },
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Jalon dorsal",
+                "repeticiones": "12/10/08",
+                "series": 3,
+                "peso": 40
+            },
+            {
+                "nombre": "Remo cerrado",
+                "repeticiones": "12/10/08",
+                "series": 3,
+                "peso": 40
+            }
+        ]
+    },
+    {
+        "dia": "Dia 1",
+        "ejercicios": [
+            {
+                "nombre": "Curl biceps banco scott",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Apertura pecho con mancuerna",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            }
+        ]
+    },
+    {
+        "dia": "Dia 2",
+        "ejercicios": [
+            {
+                "nombre": "Flexiones extension cadera",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Balanceos fronteles y laterales",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            },
+            {
+                "nombre": "Sentadillas",
+                "repeticiones": 10,
+                "series": 2,
+                "peso": 0
+            }
+        ]
+    },
+    {
+        "dia": "Dia 2",
+        "ejercicios": [
+            {
+                "nombre": "Sentadillas landmine",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            },
+            {
+                "nombre": "Sentadilla con mancuerna y estocadas",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Peso muerto",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 20
+            }
+        ]
+    },
+    {
+        "dia": "Dia 2",
+        "ejercicios": [
+            {
+                "nombre": "Hack",
+                "repeticiones": "10/08/06",
+                "series": 3,
+                "peso": 15
+            },
+            {
+                "nombre": "Gemelos hack",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 15
+            },
+            {
+                "nombre": "Camilla isquios",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 15
+            }
+        ]
+    },
+    {
+        "dia": "Dia 2",
+        "ejercicios": [
+            {
+                "nombre": "Hip trust maquina",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Camilla cuadriceps",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 50
+            }
+        ]
+    },
+    {
+        "dia": "Dia 3",
+        "ejercicios": [
+            {
+                "nombre": "Extension dorsal en banco",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Circunferencia hombro",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Posteriores con baston",
+                "repeticiones": 10,
+                "series": 3,
+                "peso": 0
+            }
+        ]
+    },
+    {
+        "dia": "Dia 3",
+        "ejercicios": [
+            {
+                "nombre": "W al menton",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            },
+            {
+                "nombre": "Press frances",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Vuelos combinados",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 10
+            }
+        ]
+    },
+    {
+        "dia": "Dia 3",
+        "ejercicios": [
+            {
+                "nombre": "Pull over",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Posteriores maquina",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Mariposa",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            }
+        ]
+    },
+    {
+        "dia": "Dia 3",
+        "ejercicios": [
+            {
+                "nombre": "Press plano con barra",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            },
+            {
+                "nombre": "Martillo con mancuernas",
+                "repeticiones": 12,
+                "series": 3,
+                "peso": 0
+            }
+        ]
+    }
 ]
-
-# Crear una lista para almacenar las rutinas
-rutinas = []
-rutina_actual = None
-
-# Iterar sobre cada fila del DataFrame
-for row in data:
-    if "Dia" in row['Ejercicios']:
-        if rutina_actual is not None:
-            rutinas.append(rutina_actual)
-        rutina_actual = {
-            "dia": row['Ejercicios'],
-            "ejercicios": []
-        }
-    elif row['Ejercicios'] != "":
-        ejercicio = {
-            "nombre": row['Ejercicios'],
-            "repeticiones": row['Repeticiones'],
-            "series": row['Series'],
-            "peso": row['Peso']
-        }
-        rutina_actual['ejercicios'].append(ejercicio)
-    elif row['Ejercicios'] == "":
-        # Añadir un objeto de separación para respetar los espacios
-        rutina_actual['ejercicios'].append({"nombre": "", "repeticiones": "", "series": "", "peso": ""})
-
-# Agregar la última rutina
-if rutina_actual is not None:
-    rutinas.append(rutina_actual)
-
-# Convertir la lista de rutinas a JSON y guardarla en un archivo
-with open('rutinas_convertidas.json', 'w', encoding='utf-8') as json_file:
-    json.dump(rutinas, json_file, indent=4, ensure_ascii=False)
