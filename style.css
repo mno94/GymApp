@@ -16,7 +16,7 @@ body {
     margin-bottom: 20px;
 }
 
-#botones-dias {
+.botones-dias {
     text-align: center;
     margin-top: 20px; /* Ajustar margen superior */
 }
@@ -52,4 +52,16 @@ body {
 
 .ejercicio-checkbox {
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 36px; /* Reducir tamaño del título para dispositivos móviles */
+    }
+
+    .day-button {
+        font-size: 18px; /* Reducir tamaño de los botones */
+        padding: 10px 20px; /* Ajustar padding de los botones */
+        margin: 5px; /* Reducir el margen entre los botones */
+    }
 }
