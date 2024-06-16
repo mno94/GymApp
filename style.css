@@ -1,10 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+/* Estilos para los botones */
+.day-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px; /* Aumentamos el padding para hacer los botones más grandes */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px; /* Espacio entre los botones */
+    border-radius: 5px;
+    display: inline-block; /* Asegurar que los botones estén en línea */
 }
 
+.day-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la visualización de los ejercicios y botones */
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -19,42 +30,32 @@ h1 {
     color: #333;
 }
 
-.buttons-container {
+.botones-dias {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.day-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-    border-radius: 5px;
-}
-
-.day-button:hover {
-    background-color: #45a049;
-}
-
-.routine-info {
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
-
 .ejercicio {
     margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
-}
-
-.ejercicio:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid #ddd;
 }
 
 .ejercicio h3 {
     margin-top: 0;
+}
+
+.ejercicio-checkbox {
+    margin-right: 10px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reducir el padding general para ahorrar espacio */
+    }
+    .day-button {
+        padding: 10px 20px; /* Reducir el padding de los botones en dispositivos móviles */
+        font-size: 14px; /* Reducir el tamaño de la fuente de los botones */
+    }
 }
