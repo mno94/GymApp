@@ -18,7 +18,7 @@ body {
 }
 
 .day-button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Color verde */
     color: white;
     padding: 15px 30px; /* Tamaño más grande */
     font-size: 20px; /* Tamaño más grande */
@@ -26,11 +26,11 @@ body {
     cursor: pointer;
     margin: 10px; /* Espaciado entre botones */
     border-radius: 5px;
-    display: block; /* Para que cada botón esté en una línea */
+    display: inline-block; /* Para que los botones estén en una línea */
 }
 
 .day-button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Color verde más oscuro al pasar el mouse */
 }
 
 .ejercicio {
