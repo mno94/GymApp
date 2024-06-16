@@ -3,12 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutinas de Gimnasio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mis Rutinas de Gimnasio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('rutinas.json', function(data) {
+                // Iterar sobre cada día en el JSON
+                $.each(data, function(index, dia) {
+                    // Crear un contenedor para cada día
+                    var dayContainer = $('<div>').addClass('day-container');
+                    
+                    // Agregar el título del día
+                    dayContainer.append($('<h2>').text(dia["Dia 1"] || dia["Dia 2"] || dia["Dia 3"]));
+                    
+                    // Crear una lista para los ejercicios de este día
+                    var exercisesList = $('<ul>').addClass('exercises-list');
+                    
+                    // Iterar sobre los ejercicios de este día
+                    $.each(dia, function(key, value) {
+                        // Ignorar las claves que corresponden a los títulos de los días
+                        if (key !== "Dia 1" && key !== "Dia 2" && key !== "Dia 3" && key !== "") {
+                            // Crear un elemento de lista para cada ejercicio
+                            var exerciseItem = $('<li>').addClass('exercise-item');
+                            exerciseItem.append($('<h3>').text(key));
+                            exerciseItem.append($('<p>').text('Repeticiones: ' + value.Repeticiones));
+                            exerciseItem.append($('<p>').text('Series: ' + value.Series));
+                            exerciseItem.append($('<p>').text('Peso: ' + value.Peso));
+                            
+                            // Agregar el ejercicio a la lista de ejercicios
+                            exercisesList.append(exerciseItem);
+                        }
+                    });
+                    
+                    // Agregar la lista de ejercicios al contenedor del día
+                    dayContainer.append(exercisesList);
+                    
+                    // Agregar el contenedor del día al cuerpo del documento
+                    $('#rutinas-container').append(dayContainer);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Mis Rutinas de Gimnasio</h1>
-    <div id="contenedor-rutinas"></div>
-    <script src="script.js"></script>
+    <div id="rutinas-container">
+        <!-- Aquí se agregarán dinámicamente los días y ejercicios -->
+    </div>
 </body>
 </html>
