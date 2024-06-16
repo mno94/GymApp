@@ -5,21 +5,14 @@ body {
     padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
+.title {
     text-align: center;
     color: #333;
+    font-size: 36px; /* Tamaño más grande */
+    margin-bottom: 20px;
 }
 
-.botones-dias {
+#botones-dias {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -27,12 +20,13 @@ h1 {
 .day-button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px; /* Tamaño más grande */
+    font-size: 20px; /* Tamaño más grande */
     border: none;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 10px; /* Espaciado entre botones */
     border-radius: 5px;
+    display: block; /* Para que cada botón esté en una línea */
 }
 
 .day-button:hover {
