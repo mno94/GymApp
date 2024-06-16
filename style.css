@@ -1,6 +1,7 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff; /* Fondo blanco */
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,23 +10,25 @@ body {
     height: 100vh;
 }
 
+/* Estilos para el título */
 .title {
     text-align: center;
     color: #333;
-    font-size: 48px; /* Aumentar tamaño del título */
+    font-size: 48px; /* Tamaño grande para desktop */
     margin-bottom: 20px;
 }
 
+/* Estilos para los botones de días */
 .botones-dias {
     text-align: center;
-    margin-top: 20px; /* Ajustar margen superior */
+    margin-top: 20px;
 }
 
 .day-button {
     background-color: #4CAF50;
     color: white;
     padding: 15px 30px;
-    font-size: 24px; /* Aumentar tamaño de los botones */
+    font-size: 24px; /* Tamaño grande para desktop */
     border: none;
     cursor: pointer;
     margin: 10px;
@@ -36,6 +39,7 @@ body {
     background-color: #45a049;
 }
 
+/* Estilos para los ejercicios */
 .ejercicio {
     margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
@@ -54,14 +58,19 @@ body {
     margin-right: 10px;
 }
 
+/* Media query para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     .title {
-        font-size: 36px; /* Reducir tamaño del título para dispositivos móviles */
+        font-size: 36px; /* Reducir tamaño del título para móviles */
     }
 
     .day-button {
-        font-size: 18px; /* Reducir tamaño de los botones */
+        font-size: 18px; /* Reducir tamaño de los botones para móviles */
         padding: 10px 20px; /* Ajustar padding de los botones */
-        margin: 5px; /* Reducir el margen entre los botones */
+        margin: 5px; /* Reducir margen entre los botones */
+    }
+
+    .ejercicio {
+        padding: 10px; /* Añadir padding a los ejercicios para móviles */
     }
 }
