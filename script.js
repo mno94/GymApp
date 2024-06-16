@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                             const detallesEjercicio = document.createElement('p');
                             detallesEjercicio.textContent = `Repeticiones: ${ejercicio.repeticiones} | Series: ${ejercicio.series} | Peso: ${ejercicio.peso}`;
+                            detallesEjercicio.classList.add('ejercicio-details');
                             ejercicioDiv.appendChild(detallesEjercicio);
 
                             ejercicioContainer.appendChild(ejercicioDiv);
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         // Agregar botones de "Volver" y "Desmarcar Todo"
                         const volverBtn = document.createElement('button');
                         volverBtn.textContent = 'Volver';
-                        volverBtn.classList.add('day-button');
+                        volverBtn.classList.add('volver-btn');
                         volverBtn.addEventListener('click', () => {
                             ejercicioContainer.innerHTML = ''; // Limpiar contenido al volver
                             mostrarDias(); // Mostrar nuevamente los botones de días
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         const desmarcarTodoBtn = document.createElement('button');
                         desmarcarTodoBtn.textContent = 'Desmarcar Todo';
-                        desmarcarTodoBtn.classList.add('day-button');
+                        desmarcarTodoBtn.classList.add('desmarcar-todo-btn');
                         desmarcarTodoBtn.addEventListener('click', () => {
                             const checkboxes = ejercicioContainer.querySelectorAll('.ejercicio-checkbox');
                             checkboxes.forEach(checkbox => {
