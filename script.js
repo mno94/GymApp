@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Función para mostrar los botones de días
     function mostrarDias() {
         const botonesDias = document.createElement('div');
-        botonesDias.id = 'botones-dias';
+        botonesDias.classList.add('botones-dias');
 
         const dias = ['Dia 1', 'Dia 2', 'Dia 3'];
 
         dias.forEach(dia => {
             const btnDia = document.createElement('button');
             btnDia.textContent = dia;
-            btnDia.classList.add('day-button');
+            btnDia.classList.add('day-button'); // Aplicar clase day-button
             btnDia.addEventListener('click', () => mostrarDia(dia));
             botonesDias.appendChild(btnDia);
         });
